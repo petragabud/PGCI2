@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&family=Playfair+Display&family=Roboto:wght@300&display=swap');
+
+header {
+  font-family: "Oswald", sans-serif;
+  text-align: center;
+  margin: 0;
+}
+
+h1 {
+  color: #6781D8;
+  font-size: 350%;
+  text-align: center;
+  margin-bottom: 0%;
+}
+
+h2 {
+  margin-bottom: 10%;
+  text-align: center;
+  color: #6781D8;
+  font-size: 280%;
+  font-family: "Playfair", sans-serif;
+}
