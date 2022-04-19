@@ -1,3 +1,4 @@
+console.log("label for action to check, varTo Check")
 let password = document.getElementById("genBn");
 password.addEventListener("click", genPassword);
 password = genPassword();
