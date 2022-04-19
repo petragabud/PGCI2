@@ -1,19 +1,41 @@
-var password = document.getElementById('password');
-password=genPassword();
+let password = document.getElementById("genBn");
+password.addEventListener("click", genPassword);
+password = genPassword();
+
 function genPassword() {
-  var chars =
-    '0123456789abcdefghijklmnopqrstuvwxyz!@#$%^&*()ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-  var passwordLength = 15;
-  var password = '';
-  for (var i = 0; i <= passwordLength; i++) {
-    var randomNumber = Math.round(Math.random() * chars.length);
+  let chars = "0123456789abcdefghijklmnopqrstuvwxyz!@#$%^&*()ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  let passwordLength = 16;
+  let password = "";
+  for (let i = 0; i <= passwordLength; i++) {
+    let randomNumber = Math.round(Math.random() * chars.length);
     password += chars.substring(randomNumber, randomNumber + 1);
   }
-  document.getElementById('password').value = password;
+  document.getElementById("resultText").value = password;
 }
-function copyPassword() {
-  var copyText = document.getElementById('password');
-  copyText.select();
-  copyText.setSelectionRange(0, 999);
-  document.execCommand('copy');
-}
+
+
+let check = document.getElementById("chBn");
+check.addEventListener("click", strengthChecker);
+check = strengthChecker();
+
+// The strong and weak password Regex pattern checker
+
+let strongPassword = new RegExp ("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})");
+let mediumPassword = new RegExp ("^(((?=.*[a-z])(?=.*[A-Z]))|((?=.*[a-z])(?=.*[0-9]))|((?=.*[A-Z])(?=.*[0-9])))(?=.{6,})");
+
+
+  function strengthChecker(PasswordParameter) {
+
+    // We then change the badge's color and text based on the password strength
+
+    if (strongPassword.test(PasswordParameter)) {
+      strengthChecker.style.backgroundColor = "green";
+    } else if (mediumPassword.test(PasswordParameter)) {
+      strengthChecker.placeholder = 'blue';
+      strengthChecker.style.display = 'block';
+    } else {
+      strengthChecker.placeholder = 'red';
+      strengthChecker.textContent = 'Weak';
+    }
+    document.getElementById("check").value = PasswordParameter;
+  }
