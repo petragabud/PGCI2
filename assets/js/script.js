@@ -3,7 +3,9 @@ let password = document.getElementById("genBn");
 password.addEventListener("click", genPassword);
 password = genPassword();
 
-console.log("genPassword func reached"); {
+console.log("genPassword func reached"); 
+function genPassword ()
+{
   let chars = "0123456789abcdefghijklmnopqrstuvwxyz!@#$%^&*()ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   let passwordLength = 16;
   let password = "";
@@ -24,7 +26,8 @@ check = strengthChecker();
 let strongPassword = new RegExp ("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})");
 let mediumPassword = new RegExp ("^(((?=.*[a-z])(?=.*[A-Z]))|((?=.*[a-z])(?=.*[0-9]))|((?=.*[A-Z])(?=.*[0-9])))(?=.{6,})");
 
-console.log("strengthChecker(PasswordParameter) func reached"); {
+console.log("strengthChecker(PasswordParameter) func reached");
+function strengthChecker(PasswordParameter) {
 
     // We then change the badge's color and text based on the password strength
 
