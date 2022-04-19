@@ -31,18 +31,22 @@ function strengthChecker(PasswordParameter) {
 
   // The strong and weak password Regex pattern checker
 
-let strongPassword = new RegExp ("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})");
-let mediumPassword = new RegExp ("^(((?=.*[a-z])(?=.*[A-Z]))|((?=.*[a-z])(?=.*[0-9]))|((?=.*[A-Z])(?=.*[0-9])))(?=.{6,})");
-
+  let strongPassword = new RegExp ("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})");
+  console.log("strongPassword", strongPassword);
+  let mediumPassword = new RegExp ("^(((?=.*[a-z])(?=.*[A-Z]))|((?=.*[a-z])(?=.*[0-9]))|((?=.*[A-Z])(?=.*[0-9])))(?=.{6,})");
+  console.log("mediumPassword", mediumPassword);
 
     // We then change the badge's color and text based on the password strength
 
     if (strongPassword.test(PasswordParameter)) {
+      console.log("PasswordParameter", PasswordParameter);
       strengthChecker.style.backgroundColor = "green";
     } else if (mediumPassword.test(PasswordParameter)) {
+      console.log("Else if PasswordParameter", PasswordParameter);
       strengthChecker.placeholder = 'blue';
       strengthChecker.style.display = 'block';
     } else {
+      console.log("Else PasswordParameter", PasswordParameter);
       strengthChecker.placeholder = 'red';
       strengthChecker.textContent = 'Weak';
     }
