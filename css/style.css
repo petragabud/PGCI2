@@ -83,3 +83,47 @@ section {
   margin-left: 180%;
   line-height: 125%;
 }
+
+
+/* footer details */
+#footer {
+    bottom: 0;
+    height: 100%;
+    min-height: 100%;
+    margin-top: 10%;
+    position: absolute;
+    display: flex;
+    width: 100%;
+  }
+  
+  #social-networks {
+    text-align: center;
+    margin-top: 5%;
+  }
+  
+  .social-networks > li {
+    color: #6781D8;
+    display: inline;
+    font-size: 260%;
+    min-height: 100%;
+    opacity: 1;
+    text-align: center;
+  }
+  
+  .fa-brands {
+    color: #6781D8;
+  }
+  
+  .fa-brands:hover {
+    background-color: none;
+    color: #d1d7eb;
+  }
+  
+  /* copyright with my personal name at the bottom of the page */
+  .copyright {
+    color: #6781D8;
+    font-size: 200%;
+    list-style-type: none;
+    opacity: 1;
+    text-align: center;
+  }
