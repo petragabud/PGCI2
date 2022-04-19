@@ -18,16 +18,15 @@ function genPassword ()
 }
 
 
-
+let check = document.getElementById("check");
+check.addEventListener("click", strengthChecker);
+check = strengthChecker();
 
 
 
 function strengthChecker(PasswordParameter) {
   console.log("strengthChecker(PasswordParameter) func reached");
 
-  let check = document.getElementById("chBn");
-  check.addEventListener("click", strengthChecker);
-  check = strengthChecker();
 
 
   // The strong and weak password Regex pattern checker
