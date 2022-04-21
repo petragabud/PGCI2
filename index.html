@@ -17,6 +17,10 @@
 
     <!-- File path to connect CSS and HTML -->
     <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!-- Bootstrap 5 link -->
+    <link href= "https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <!-- CSS Styling -->
 
   </head>
 
@@ -38,25 +42,27 @@
           <!-- Placeholder for Generated Data Output -->
 
           <div class="password-holder">
-            <input type="password" placeholder="Create Password" id="passResult" value = "password">
+            <input type="" placeholder="Create Password" id="passResult" class="passResult">
+            
+            <br>
+            <span id="StrengthDisp" class="badge DisplayBadge">Weak</span>
+              <br>
+              
           </div>
-
 
           <!-- Generate Button -->
           <div class=button-group>
             <button id="genBn" class="generate-button">Generate</button>
 
-            <!-- Copy Button -->
-            <button id="check" class="check-button">Check</button>
-            <br>
-            <span id="strenghtChecker" class="">Weak</s>
-              <br>
+            <!-- Check Password Button -->
+            <button id="strenghtStatus" class="strenghtStatus">Check Password</button>
+            
           </div>
         </div>
       </div>
       <!-- End Generator Section -->
     </section>
 <script src="assets/js/script.js"> </script>
-  </body>>
+  </body>
 
 </html>

@@ -17,10 +17,14 @@ function genPassword ()
   document.getElementById("passResult").value = password;
 }
 
+ // timeout before a callback is called
 
-let check = document.getElementById("strenghtChecker");
-check.addEventListener("click", strengthChecker);
-check = strengthChecker();
+    let timeout;
+
+ // Adding an click event listener when a user cliks Check Button 
+let strenghtBadge = document.getElementById("StrengthDisp");
+strenghtBadge.addEventListener("click", strengthChecker);
+strenghtBadge = strengthChecker();
 
 
 
@@ -40,15 +44,23 @@ function strengthChecker(PasswordParameter) {
 
     if (strongPassword.test(PasswordParameter)) {
       console.log("PasswordParameter", PasswordParameter);
-      strengthChecker.style.backgroundColor = "green";
+      strengthBadge.style.backgroundColor = "green";
     } else if (mediumPassword.test(PasswordParameter)) {
       console.log("Else if PasswordParameter", PasswordParameter);
-      strengthChecker.password = 'blue';
-      strengthChecker.style.display = 'block';
+      strengthBadge.password = 'blue';
+      strengthBadge.style.display = 'block';
     } else {
       console.log("Else PasswordParameter", PasswordParameter);
-      strengthChecker.password = 'red';
-      strengthChecker.textContent = 'Weak';
+      strengthBadge.password = 'red';
+      strengthBadge.textContent = 'Weak';
     }
     document.getElementById("strenghtChecker").value = PasswordParameter;
   }
+  
+   //The badge is hidden by default, so we show it
+
+        strengthStatus.style.display= 'block'
+        clearTimeout(timeout);
+        
+            //We then call the StrengChecker function as a callback then pass the typed password to it
+  timeout = setTimeout(() => StrengthChecker(password.value), 500);
