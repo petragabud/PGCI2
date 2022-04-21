@@ -22,9 +22,9 @@ function genPassword ()
     let timeout;
 
  // Adding an click event listener when a user cliks Check Button 
-let strenghtBadge = document.getElementById("StrengthDisp");
-strenghtBadge.addEventListener("click", strengthChecker);
-strenghtBadge = strengthChecker();
+ let strengthBadge = document.getElementById('StrengthDisp');
+strengthBadge.addEventListener("click", strengthChecker);
+strengthBadge = strengthChecker();
 
 
 
