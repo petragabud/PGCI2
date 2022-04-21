@@ -59,7 +59,7 @@ function strengthChecker(PasswordParameter) {
   
    //The badge is hidden by default, so we show it
 
-        strengthStatus.style.display= 'block';
+        strengthBadge.style.display= 'block';
         clearTimeout(timeout);
         
             //We then call the StrengChecker function as a callback then pass the typed password to it
