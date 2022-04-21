@@ -23,7 +23,7 @@ function genPassword ()
 
  // Adding an click event listener when a user cliks Check Button 
  let strengthBadge = document.getElementById('StrengthDisp');
-strengthBadge.addEventListener("click", strengthChecker);
+strengthBadge.addEventListener("click", PasswordParameter);
 strengthBadge = strengthChecker();
 
 
