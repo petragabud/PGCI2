@@ -1,4 +1,4 @@
-console.log("label for action to check, varTo Check")
+console.log("label for action to check, varTo Check");
 let password = document.getElementById("genBn");
 password.addEventListener("click", genPassword);
 password = genPassword();
@@ -59,7 +59,7 @@ function strengthChecker(PasswordParameter) {
   
    //The badge is hidden by default, so we show it
 
-        strengthStatus.style.display= 'block'
+        strengthStatus.style.display= 'block';
         clearTimeout(timeout);
         
             //We then call the StrengChecker function as a callback then pass the typed password to it
