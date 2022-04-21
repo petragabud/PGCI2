@@ -63,4 +63,4 @@ function strengthChecker(PasswordParameter) {
         clearTimeout(timeout);
         
             //We then call the StrengChecker function as a callback then pass the typed password to it
-  timeout = setTimeout(() => StrengthChecker(password.value), 500);
+  timeout = setTimeout(() => strengthChecker(password.value), 500);
