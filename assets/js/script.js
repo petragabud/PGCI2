@@ -14,11 +14,11 @@ function genPassword ()
     let randomNumber = Math.round(Math.random() * chars.length);
     password += chars.substring(randomNumber, randomNumber + 1);
   }
-  document.getElementById("resultText").value = password;
+  document.getElementById("passResult").value = password;
 }
 
 
-let check = document.getElementById("check");
+let check = document.getElementById("strenghtChecker");
 check.addEventListener("click", strengthChecker);
 check = strengthChecker();
 
@@ -43,12 +43,12 @@ function strengthChecker(PasswordParameter) {
       strengthChecker.style.backgroundColor = "green";
     } else if (mediumPassword.test(PasswordParameter)) {
       console.log("Else if PasswordParameter", PasswordParameter);
-      strengthChecker.placeholder = 'blue';
+      strengthChecker.password = 'blue';
       strengthChecker.style.display = 'block';
     } else {
       console.log("Else PasswordParameter", PasswordParameter);
-      strengthChecker.placeholder = 'red';
+      strengthChecker.password = 'red';
       strengthChecker.textContent = 'Weak';
     }
-    document.getElementById("check").value = PasswordParameter;
+    document.getElementById("strenghtChecker").value = PasswordParameter;
   }

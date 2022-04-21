@@ -29,7 +29,7 @@ section {
     justify-content: center;
   }
   
-  input {
+input {
     padding: 5%;
     user-select: none;
     height: 25%;
@@ -43,7 +43,7 @@ section {
     text-align: center;
   }
   
-  input::placeholder {
+  input::password-holder {
     font-size: 450%;
   }
   
